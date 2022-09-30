@@ -234,7 +234,24 @@ public class ViewJPanel extends javax.swing.JPanel {
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO add your handling code here:
+         // TODO add your handling code here:
         
+       int selectedRowIndex = tblEmployees.getSelectedRow();
+       if (selectedRowIndex <0){
+           
+           JOptionPane.showMessageDialog(this,"Please select a row to delete");
+           return;
+       }
+       DefaultTableModel model = (DefaultTableModel) tblEmployees.getModel();
+      Employee selectEmployees = (Employee) model.getValueAt(selectedRowIndex, 0);
+       
+      history.deleteEmployee(selectEmployees);
+      
+      
+      JOptionPane.showMessageDialog(this,"Employee deleted");
+      
+      populateTable();
+
        
          
        
@@ -242,7 +259,29 @@ public class ViewJPanel extends javax.swing.JPanel {
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
         // TODO add your handling code here:
+         // TODO add your handling code here:
         
+           
+       int selectedRowIndex = tblEmployees.getSelectedRow();
+       if (selectedRowIndex <0){
+           
+           JOptionPane.showMessageDialog(this,"Please select a row to view");
+           return;
+       }
+       DefaultTableModel model = (DefaultTableModel) tblEmployees.getModel();
+      Employee selectEmployees = (Employee) model.getValueAt(selectedRowIndex, 0);
+      
+      
+      txtName.setText(String.valueOf(selectEmployees.getName()));
+      txtEmpId.setText(String.valueOf(selectEmployees.getEmpId()));
+      txtAge.setText(String.valueOf(selectEmployees.getAge()));
+      txtGender.setText(String.valueOf(selectEmployees.getGender()));
+      txtStartD.setText(String.valueOf(selectEmployees.getStartDate()));
+      txtLevel.setText(String.valueOf(selectEmployees.getLevel()));
+      txtTeamInfo.setText(String.valueOf(selectEmployees.getTeamInfo()));
+      txtPositionInfo.setText(String.valueOf(selectEmployees.getPositionTitle()));
+      txtPhoneNo.setText(String.valueOf(selectEmployees.getPhoneNo()));
+      txtEmailId.setText(String.valueOf(selectEmployees.getEmail())); 
            
        
     }//GEN-LAST:event_btnViewActionPerformed
