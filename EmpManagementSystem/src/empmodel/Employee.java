@@ -4,6 +4,10 @@
  */
 package empmodel;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author vivekhanagoji
@@ -11,8 +15,8 @@ package empmodel;
 public class Employee {
     
     private String name;
-    private String empId;
-    private String age;
+    private int empId;
+    private int age;
     private String gender;
     private String startDate;
     private String level;
@@ -20,6 +24,29 @@ public class Employee {
     private String positionTitle;
     private String phoneNo;
     private String email;
+    
+    
+    public static boolean isValidMobileNo(String str)  
+{  
+
+Pattern ptrn = Pattern.compile("^[6-9]\\d{9}$");   
+Matcher match = ptrn.matcher(str);  
+return (match.find() && match.group().equals(str));  
+}  
+    
+    
+    
+       public String getPhoneNo() {
+       
+            return phoneNo;
+       }
+       
+
+        public void setPhoneNo(String phoneNo) {
+            this.phoneNo = phoneNo;
+        }
+   
+
 
     public String getName() {
         return name;
@@ -29,19 +56,19 @@ public class Employee {
         this.name = name;
     }
 
-    public String getEmpId() {
+    public int getEmpId() {
         return empId;
     }
 
-    public void setEmpId(String empId) {
+    public void setEmpId(int empId) {
         this.empId = empId;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -85,13 +112,13 @@ public class Employee {
         this.positionTitle = positionTitle;
     }
 
-    public String getPhoneNo() {
+ /*   public int getPhoneNo() {
         return phoneNo;
     }
 
-    public void setPhoneNo(String phoneNo) {
+    public void setPhoneNo(int phoneNo) {
         this.phoneNo = phoneNo;
-    }
+    }*/
 
     public String getEmail() {
         return email;
