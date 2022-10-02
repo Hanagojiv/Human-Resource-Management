@@ -359,11 +359,11 @@ public class CreateJPanel extends javax.swing.JPanel {
     private void btnUploadImgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUploadImgActionPerformed
         // TODO add your handling code here:
         JFileChooser filePicker = new JFileChooser();
-        
+
         filePicker.showOpenDialog(null);
         PicURL = filePicker.getSelectedFile().getAbsolutePath();
     }//GEN-LAST:event_btnUploadImgActionPerformed
-
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
