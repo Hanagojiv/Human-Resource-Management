@@ -222,102 +222,19 @@ public class CreateJPanel extends javax.swing.JPanel {
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         
-        int EmpId = Integer.parseInt(txtEmpId.getText());
-        int EmpAge = Integer.parseInt(txtAge.getText());
+     //   int EmpId = Integer.parseInt(txtEmpId.getText());
+    int EmpAge = Integer.parseInt(txtAge.getText());
       //  int EmpPhone = Integer.parseInt(txtEmpId.getText());
         
-        Employee emp = history.addNewEmp();
         
+        boolean valid = validationForFields();
         
-        
-        if(txtName.getText().length()==0)
-    {
-        JOptionPane.showMessageDialog(this," Name Can't be blank, please enter Employee Name");
-        txtName.setText("");
-        return;
-    }
-        
-        if(txtName.getText().matches("^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$"))
-            {
-                 emp.setName(txtName.getText());
-                
-                
-            }
-        else
-        {
-            JOptionPane.showMessageDialog(this," Invalid name. ");
-                    txtName.setText("");
-                    return;
-        }
+        if(valid){
+                Employee emp = history.addNewEmp();
 
-        
-
- 
-
-    //getting Employee ID details
-//            if(txtEmpId.getText().length()==0)
-//    {
-//        JOptionPane.showMessageDialog(this," Employee ID Can't be blank, please enter Employee ");
-//        txtEmpId.setText("");
-//        return;
-//    }
-//        else
-//        {
-//             if(txtEmpId.getText().matches("^\\d{6}?$"))
-//             {
-//                emp.setEmpId(EmpId);
-//                
-//             }    
-//             else
-//             {
-//                JOptionPane.showMessageDialog(this," Invalid Employee ID. Note Employee ID is of 6 digit. ");
-//                return;
-//             }
-//            //emp.setName(txtName.getText());
-//        }
-   
-//        if(EmpAge>=20 && EmpAge<=60 )
-//        {
-//            emp.setAge(EmpAge);
-//            return;
-//        }
-//        else
-//        {
-//            JOptionPane.showMessageDialog(this," Employee should be between 20 to 60 years old. ");
-//            txtAge.setText("");
-//        }
-        
-    
-        /* function isValidDate(dateString)
-{
-        String Date = txtStartD.getText());
-    // First check for the pattern
-    if(!/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(txtStartD.getText()))
-        JOptionPane.showMessageDialog(this," Invalid Date format, please enter date in MM/DD/YYYY format ");
-        return;
-
-    // Parse the date parts to integers
-    var parts = dateString.split("/");
-    var day = parseInt(parts[1], 10);
-    var month = parseInt(parts[0], 10);
-    var year = parseInt(parts[2], 10);
-
-    // Check the ranges of month and year
-    if(year < 1000 || year > 3000 || month == 0 || month > 12)
-        JOptionPane.showMessageDialog(this," Invalid month or year!!");
-        return;
-
-    var monthLength = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
-
-    // Adjust for leap years
-    if(year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))
-        monthLength[1] = 29;
-
-    // Check the range of the day
-    return day > 0 && day <= monthLength[month - 1];
-        
-};*/    emp.setAge(EmpAge);
-        emp.setEmpId(EmpId);
+        emp.setName(txtName.getText());    
+        emp.setAge(Integer.parseInt(txtAge.getText()));
+        emp.setEmpId(Integer.parseInt(txtEmpId.getText()));
         emp.setGender(txtGender.getText());
         emp.setStartDate(txtStartD.getText());
         emp.setLevel(txtLevel.getText());
@@ -350,6 +267,10 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtPositionInfo.setText("");
         txtPhoneNo.setText("");
         txtEmailId.setText("");
+            
+        }
+        
+         
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
@@ -392,5 +313,70 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtStartD;
     private javax.swing.JTextField txtTeamInfo;
     // End of variables declaration//GEN-END:variables
+
+    private boolean validationForFields() {
+
+        
+        
+          if(txtName.getText().length()==0)
+    {
+        JOptionPane.showMessageDialog(this," Name Can't be blank, please enter Employee Name");
+       txtName.requestFocus();
+        txtName.setText("");
+        return false;
+    }
+        else{
+        if(!txtName.getText().matches("^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$"))
+            {
+                 JOptionPane.showMessageDialog(this," Invalid name. ");
+  txtName.requestFocus();
+                 txtName.setText("");
+                 return false;
+                
+                
+            }
+          }
+
+    //getting Employee ID details
+   if(txtEmpId.getText().isBlank())
+    {
+        JOptionPane.showMessageDialog(this," Employee ID Can't be blank, please enter Employee ");
+        txtEmpId.requestFocus();
+        txtEmpId.setText("");
+        return false;
+    }
+        else
+        {
+             if(!txtEmpId.getText().matches("^[0-9]{0,6}$"))
+             {
+                JOptionPane.showMessageDialog(this," Invalid Employee ");
+                txtEmpId.requestFocus();
+                return false;
+                
+             }  
+        }
+   if(txtAge.getText().isBlank())
+   {
+         JOptionPane.showMessageDialog(this," Age can't be blank ");
+         txtEmpId.requestFocus();
+         txtEmpId.setText("");
+        return false;
+   }
+          
+        else
+        {
+              if(!txtAge.getText().matches("^0?(1[89]|[2-9]\\d)$"))
+              {
+                  JOptionPane.showMessageDialog(this," Employee should be between 18 to 99 years old. ");
+                  txtAge.requestFocus(); 
+                  txtAge.setText("");
+                  return false;
+              }
+              
+        }
+
+
+        return true;
+    }
 }
 

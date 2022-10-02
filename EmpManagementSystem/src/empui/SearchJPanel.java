@@ -293,7 +293,7 @@ public class SearchJPanel extends javax.swing.JPanel {
 
             }
         } 
-    else if (cbSearchType.equals(" Employee Age")) {
+    else if (cbSearchType.equals("Employee Age")) {
             for (Employee employee : empList) {
 
                 if (Integer.parseInt(cbValues) == employee.getAge()) {
@@ -329,10 +329,8 @@ public class SearchJPanel extends javax.swing.JPanel {
                     row[9] = em.getEmail();
                     model.addRow(row);
        // boolean isPresent = false;
-  
-                    
-               
-         if (isPresent == false) {
+       } 
+       if (isPresent == false) {
             JOptionPane.showMessageDialog(null, "No Records found");
             return;
         }
@@ -340,7 +338,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             
       
             
-        }    
+           
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
