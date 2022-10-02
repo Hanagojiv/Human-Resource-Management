@@ -24,15 +24,17 @@ public class Employee {
     private String positionTitle;
     private String phoneNo;
     private String email;
-    
-    
-    public static boolean isValidMobileNo(String str)  
-{  
+    private String UploadPhoto;
 
-Pattern ptrn = Pattern.compile("^[6-9]\\d{9}$");   
-Matcher match = ptrn.matcher(str);  
-return (match.find() && match.group().equals(str));  
-}  
+    public String getUploadPhoto() {
+        return UploadPhoto;
+    }
+
+    public void setUploadPhoto(String UploadPhoto) {
+        this.UploadPhoto = UploadPhoto;
+    }
+    
+ 
     
     
     
