@@ -214,6 +214,7 @@ public class SearchJPanel extends javax.swing.JPanel {
                     row[9] = em.getEmail();
                     model.addRow(row);
        // boolean isPresent = false;
+             
        Image img = Toolkit.getDefaultToolkit().createImage(em.getUploadPhoto());
         img = img.getScaledInstance(lblPhoto.getWidth(), lblPhoto.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon icon = new ImageIcon(img);

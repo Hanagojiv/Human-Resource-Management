@@ -8,7 +8,6 @@ import empmodel.EmpHistory;
 import empmodel.Employee;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
