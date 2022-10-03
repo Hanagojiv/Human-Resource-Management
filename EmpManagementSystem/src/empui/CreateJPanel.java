@@ -374,7 +374,79 @@ public class CreateJPanel extends javax.swing.JPanel {
               }
               
         }
-
+ if(txtStartD.getText().isBlank())
+    {
+        JOptionPane.showMessageDialog(this," Date cannot be blank, please enter a valid Start Date ");
+         txtStartD.requestFocus();
+         txtStartD.setText("");
+        return false;
+    }
+        else
+           {
+               if(!txtStartD.getText().matches("^(1[0-2]|0[1-9])/(3[01]|[12][0-9]|0[1-9])/[0-9]{4}$"))
+               {
+                   JOptionPane.showMessageDialog(this," Invalid Date format MM/DD/YYYY ");
+                    txtStartD.requestFocus();
+                    txtStartD.setText("");
+                   return false;
+               }
+            }
+ if(txtPhoneNo.getText().isBlank())
+ {
+         JOptionPane.showMessageDialog(this," Date cannot be blank, please enter a valid Start Date ");
+         txtStartD.requestFocus();
+         txtStartD.setText("");
+        return false;
+ }
+        else
+        {
+            if(!txtPhoneNo.getText().matches("^[2-9]{2}[0-9]{8}$"))
+            {
+                    JOptionPane.showMessageDialog(this," Invalid Phone Number format, please enter a valid 10 digit US Phone No. ");
+                    txtPhoneNo.requestFocus();
+                    txtPhoneNo.setText("");
+                   return false;
+            }
+        }
+ if(txtGender.getText().isBlank())
+ {
+         JOptionPane.showMessageDialog(this," Gender cannot be blank, please enter employee's gender ");
+         txtStartD.requestFocus();
+         txtStartD.setText("");
+        return false;
+ }
+  if(txtLevel.getText().isBlank())
+ {
+         JOptionPane.showMessageDialog(this," Level cannot be blank ");
+         txtLevel.requestFocus();
+         txtLevel.setText("");
+        return false;
+ }
+   if(txtTeamInfo.getText().isBlank())
+ {
+         JOptionPane.showMessageDialog(this," Team Information cannot be blank please enter employee's team details. ");
+         txtTeamInfo.requestFocus();
+         txtTeamInfo.setText("");
+        return false;
+ }
+   if(txtEmailId.getText().isBlank())
+ {
+         JOptionPane.showMessageDialog(this," Please enter the Email Id ");
+         txtEmailId.requestFocus();
+         txtEmailId.setText("");
+        return false;
+ }
+   else
+   {
+       if(!txtEmailId.getText().matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"))
+       {
+           JOptionPane.showMessageDialog(this," Invalid email address ");
+                    txtEmailId.requestFocus();
+                    txtEmailId.setText("");
+                   return false;
+       }
+   }
 
         return true;
     }

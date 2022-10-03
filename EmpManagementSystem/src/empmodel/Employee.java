@@ -114,14 +114,6 @@ public class Employee {
         this.positionTitle = positionTitle;
     }
 
- /*   public int getPhoneNo() {
-        return phoneNo;
-    }
-
-    public void setPhoneNo(int phoneNo) {
-        this.phoneNo = phoneNo;
-    }*/
-
     public String getEmail() {
         return email;
     }

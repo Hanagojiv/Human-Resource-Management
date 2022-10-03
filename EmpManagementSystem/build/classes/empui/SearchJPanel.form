@@ -16,36 +16,6 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="312" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="lblEmpId1" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblAge" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblName" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblStartDate" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblGender" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblLevel" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblTeamInfo" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblPositionInfo" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblContactInfo" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblPhoneNo" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblEmailId" alignment="1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="txtName" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                  <Component id="txtEmpId1" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                  <Component id="txtAge" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                  <Component id="txtGender" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                  <Component id="txtStartD" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                  <Component id="txtLevel" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                  <Component id="txtTeamInfo" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                  <Component id="txtPositionInfo" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                  <Component id="txtPhoneNo" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-                  <Component id="txtEmailId" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
@@ -53,24 +23,21 @@
                       <Component id="jScrollPane1" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
-                              <Component id="jLabel1" min="-2" pref="412" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
-                              <Component id="cbAttributes" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                              <Component id="txtSearch" min="-2" pref="99" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                              <Component id="btnSearch" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="0" pref="217" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
+                      <Component id="cbAttributes" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                      <Component id="txtSearch" min="-2" pref="99" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="btnSearch" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="232" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="lblPhoto" min="-2" pref="105" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="171" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -83,155 +50,16 @@
                   <Component id="txtSearch" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cbAttributes" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+              <Component id="lblPhoto" min="-2" pref="99" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="153" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblName" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblEmpId1" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="txtEmpId1" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblAge" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="txtAge" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblGender" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="txtGender" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblStartDate" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="txtStartD" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblLevel" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="txtLevel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblTeamInfo" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="txtTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblPositionInfo" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="txtPositionInfo" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="lblContactInfo" min="-2" pref="26" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblPhoneNo" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="txtPhoneNo" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblEmailId" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="txtEmailId" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="89" max="32767" attributes="0"/>
+              <EmptySpace pref="390" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="txtName">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblEmpId1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Employee ID:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtEmpId1">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblAge">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Age:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtAge">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblGender">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Gender:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtGender">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblStartDate">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Start Date:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtEmailId">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblEmailId">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Email ID:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblName">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Name:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Helvetica Neue" size="18" style="1"/>
-        </Property>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Employee Details"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtStartD">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblLevel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Level:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtLevel">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblTeamInfo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Team Info:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtTeamInfo">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblPositionInfo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Position title:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtPositionInfo">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblContactInfo">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Helvetica Neue" size="13" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Contact Information"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtPhoneNo">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblPhoneNo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Phone Number:"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="btnSearch">
       <Properties>
         <Property name="text" type="java.lang.String" value="Search"/>
@@ -291,6 +119,8 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblPhoto">
     </Component>
   </SubComponents>
 </Form>
