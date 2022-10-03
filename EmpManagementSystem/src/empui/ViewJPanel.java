@@ -349,12 +349,15 @@ public class ViewJPanel extends javax.swing.JPanel {
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
        
+        boolean valid = validationForFields();
    int selectedRowIndex = tblEmployees.getSelectedRow();
        if (selectedRowIndex <0){
            
            JOptionPane.showMessageDialog(this,"Please select a row to view");
            return;
        }
+       
+     
        DefaultTableModel model = (DefaultTableModel) tblEmployees.getModel();
       Employee selectEmployees = (Employee) model.getValueAt(selectedRowIndex, 0);
       
@@ -442,7 +445,154 @@ public class ViewJPanel extends javax.swing.JPanel {
         }
     }
 
+ private boolean validationForFields() {
 
+        
+        
+          if(txtName.getText().length()==0)
+    {
+        JOptionPane.showMessageDialog(this," Name Can't be blank, please enter Employee Name");
+       txtName.requestFocus();
+        txtName.setText("");
+        return false;
+    }
+        else{
+        if(!txtName.getText().matches("^[a-zA-Z]+[\\-'\\s]?[a-zA-Z ]+$"))
+            {
+                 JOptionPane.showMessageDialog(this," Invalid name. ");
+  txtName.requestFocus();
+                 txtName.setText("");
+                 return false;
+                
+                
+            }
+          }
+
+    //getting Employee ID details
+   if(txtEmpId.getText().isBlank() && isNumeric(txtEmpId.getText()))
+    {
+        JOptionPane.showMessageDialog(this," Entered Employee ID is invalid ");
+        txtEmpId.requestFocus();
+        txtEmpId.setText("");
+        return false;
+    }
+        else
+        {
+             if(!txtEmpId.getText().matches("^[0-9]{0,6}$"))
+             {
+                JOptionPane.showMessageDialog(this," Invalid Employee ");
+                txtEmpId.requestFocus();
+                return false;
+                
+             }  
+        }
+   if(txtAge.getText().isBlank() && isNumeric(txtAge.getText()))
+   {
+         JOptionPane.showMessageDialog(this," Age is invalid ");
+         txtEmpId.requestFocus();
+         txtEmpId.setText("");
+        return false;
+   }
+          
+        else
+        {
+              if(!txtAge.getText().matches("^0?(1[89]|[2-9]\\d)$"))
+              {
+                  JOptionPane.showMessageDialog(this," Employee should be between 18 to 99 years old. ");
+                  txtAge.requestFocus(); 
+                  txtAge.setText("");
+                  return false;
+              }
+              
+        }
+ if(txtStartD.getText().isBlank())
+    {
+        JOptionPane.showMessageDialog(this," Date cannot be blank, please enter a valid Start Date ");
+         txtStartD.requestFocus();
+         txtStartD.setText("");
+        return false;
+    }
+        else
+           {
+               if(!txtStartD.getText().matches("^(1[0-2]|0[1-9])/(3[01]|[12][0-9]|0[1-9])/[0-9]{4}$"))
+               {
+                   JOptionPane.showMessageDialog(this," Invalid Date format MM/DD/YYYY ");
+                    txtStartD.requestFocus();
+                    txtStartD.setText("");
+                   return false;
+               }
+            }
+ if(txtPhoneNo.getText().isBlank())
+ {
+         JOptionPane.showMessageDialog(this," Date cannot be blank, please enter a valid Start Date ");
+         txtStartD.requestFocus();
+         txtStartD.setText("");
+        return false;
+ }
+        else
+        {
+            if(!txtPhoneNo.getText().matches("^[2-9]{2}[0-9]{8}$"))
+            {
+                    JOptionPane.showMessageDialog(this," Invalid Phone Number format, please enter a valid 10 digit US Phone No. ");
+                    txtPhoneNo.requestFocus();
+                    txtPhoneNo.setText("");
+                   return false;
+            }
+        }
+ if(txtGender.getText().isBlank())
+ {
+         JOptionPane.showMessageDialog(this," Gender cannot be blank, please enter employee's gender ");
+         txtStartD.requestFocus();
+         txtStartD.setText("");
+        return false;
+ }
+  if(txtLevel.getText().isBlank())
+ {
+         JOptionPane.showMessageDialog(this," Level cannot be blank ");
+         txtLevel.requestFocus();
+         txtLevel.setText("");
+        return false;
+ }
+   if(txtTeamInfo.getText().isBlank())
+ {
+         JOptionPane.showMessageDialog(this," Team Information cannot be blank please enter employee's team details. ");
+         txtTeamInfo.requestFocus();
+         txtTeamInfo.setText("");
+        return false;
+ }
+   if(txtEmailId.getText().isBlank())
+ {
+         JOptionPane.showMessageDialog(this," Please enter the Email Id ");
+         txtEmailId.requestFocus();
+         txtEmailId.setText("");
+        return false;
+ }
+   else
+   {
+       if(!txtEmailId.getText().matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"))
+       {
+           JOptionPane.showMessageDialog(this," Invalid email address ");
+                    txtEmailId.requestFocus();
+                    txtEmailId.setText("");
+                   return false;
+       }
+   }
+
+        return true;
+    }
+ public boolean isNumeric (String a)
+ {
+
+     try{
+         int input = Integer.parseInt(a);
+         
+                 
+     }catch (NumberFormatException nfe){
+         return false;
+     }
+     return true;
+ }
 
 }
 

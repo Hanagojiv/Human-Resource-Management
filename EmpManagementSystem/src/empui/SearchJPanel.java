@@ -195,11 +195,11 @@ public class SearchJPanel extends javax.swing.JPanel {
      
     DefaultTableModel model = (DefaultTableModel) tblEmployees.getModel();
         model.setRowCount(0);
-//      if (txtSearch.getText().length() == 0)  
-//      {
-//          JOptionPane.showMessageDialog(this," Enter something to search");
-//        return;
-//      }
+      if (txtSearch.getText().length() == 0)  
+      {
+          JOptionPane.showMessageDialog(this," Enter something to search");
+        return;
+      }
         for (Employee em : employeeList){
                     Object[] row = new Object[10];
                     row[0] = em;
@@ -248,28 +248,6 @@ public class SearchJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtSearch;
     // End of variables declaration//GEN-END:variables
 
-//    private void populateTable(){
-//         DefaultTableModel model = (DefaultTableModel) tblEmployees.getModel();
-//        model.setRowCount(0);
-//        
-//        for (Employee em : history.getHistory()){
-//            
-//            Object[] row = new Object[10];
-//            row[0] = em;
-//            row[1] = em.getEmpId();
-//            row[2] = em.getAge();
-//            row[3] = em.getGender();
-//            row[4] = em.getStartDate();
-//            row[5] = em.getLevel();
-//            row[6] = em.getTeamInfo();
-//            row[7] = em.getPositionTitle();
-//            row[8] = em.getPhoneNo();
-//            row[9] = em.getEmail();
-//            
-//            
-//            model.addRow(row);
-//        }
-//    }
     public static boolean isNumeric(final String str) {
 
         // null or empty
