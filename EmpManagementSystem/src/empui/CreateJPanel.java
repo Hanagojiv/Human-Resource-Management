@@ -338,7 +338,7 @@ public class CreateJPanel extends javax.swing.JPanel {
           }
 
     //getting Employee ID details
-   if(txtEmpId.getText().isBlank())
+   if(txtEmpId.getText().isBlank() && !isNumeric(txtEmpId.getText()))
     {
         JOptionPane.showMessageDialog(this," Employee ID Can't be blank, please enter Employee ");
         txtEmpId.requestFocus();
@@ -347,19 +347,20 @@ public class CreateJPanel extends javax.swing.JPanel {
     }
         else
         {
+            
              if(!txtEmpId.getText().matches("^[0-9]{0,6}$"))
              {
-                JOptionPane.showMessageDialog(this," Invalid Employee ");
+                JOptionPane.showMessageDialog(this," Invalid Employee, Note : Employee ID is of 6 digit  ");
                 txtEmpId.requestFocus();
                 return false;
                 
              }  
         }
-   if(txtAge.getText().isBlank())
+   if(txtAge.getText().isBlank() && !isNumeric(txtAge.getText()))
    {
-         JOptionPane.showMessageDialog(this," Age can't be blank ");
-         txtEmpId.requestFocus();
-         txtEmpId.setText("");
+         JOptionPane.showMessageDialog(this," Age invalid ");
+         txtAge.requestFocus();
+         txtAge.setText("");
         return false;
    }
           
@@ -391,11 +392,11 @@ public class CreateJPanel extends javax.swing.JPanel {
                    return false;
                }
             }
- if(txtPhoneNo.getText().isBlank())
+ if(txtPhoneNo.getText().isBlank() && !isNumeric(txtPhoneNo.getText()))
  {
          JOptionPane.showMessageDialog(this," Date cannot be blank, please enter a valid Start Date ");
-         txtStartD.requestFocus();
-         txtStartD.setText("");
+         txtPhoneNo.requestFocus();
+         txtPhoneNo.setText("");
         return false;
  }
         else
@@ -411,8 +412,8 @@ public class CreateJPanel extends javax.swing.JPanel {
  if(txtGender.getText().isBlank())
  {
          JOptionPane.showMessageDialog(this," Gender cannot be blank, please enter employee's gender ");
-         txtStartD.requestFocus();
-         txtStartD.setText("");
+         txtGender.requestFocus();
+         txtGender.setText("");
         return false;
  }
   if(txtLevel.getText().isBlank())
@@ -450,5 +451,17 @@ public class CreateJPanel extends javax.swing.JPanel {
 
         return true;
     }
+     public boolean isNumeric (String a)
+ {
+
+     try{
+         int input = Integer.parseInt(a);
+         
+                 
+     }catch (NumberFormatException nfe){
+         return false;
+     }
+     return true;
+ }
 }
 

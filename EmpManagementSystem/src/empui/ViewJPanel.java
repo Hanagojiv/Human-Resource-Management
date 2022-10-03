@@ -318,7 +318,7 @@ public class ViewJPanel extends javax.swing.JPanel {
        int selectedRowIndex = tblEmployees.getSelectedRow();
        if (selectedRowIndex <0){
            
-           JOptionPane.showMessageDialog(this,"Please select a row to view");
+           JOptionPane.showMessageDialog(this,"Please select a row to view employee details");
            return;
        }
        DefaultTableModel model = (DefaultTableModel) tblEmployees.getModel();
@@ -353,7 +353,7 @@ public class ViewJPanel extends javax.swing.JPanel {
    int selectedRowIndex = tblEmployees.getSelectedRow();
        if (selectedRowIndex <0){
            
-           JOptionPane.showMessageDialog(this,"Please select a row to view");
+           JOptionPane.showMessageDialog(this,"Please select a row to Update employee details");
            return;
        }
        
@@ -469,7 +469,7 @@ public class ViewJPanel extends javax.swing.JPanel {
           }
 
     //getting Employee ID details
-   if(txtEmpId.getText().isBlank() && isNumeric(txtEmpId.getText()))
+   if(txtEmpId.getText().isBlank() && !isNumeric(txtEmpId.getText()))
     {
         JOptionPane.showMessageDialog(this," Entered Employee ID is invalid ");
         txtEmpId.requestFocus();
@@ -486,11 +486,11 @@ public class ViewJPanel extends javax.swing.JPanel {
                 
              }  
         }
-   if(txtAge.getText().isBlank() && isNumeric(txtAge.getText()))
+   if(txtAge.getText().isBlank() && !isNumeric(txtAge.getText()))
    {
          JOptionPane.showMessageDialog(this," Age is invalid ");
-         txtEmpId.requestFocus();
-         txtEmpId.setText("");
+         txtAge.requestFocus();
+         txtAge.setText("");
         return false;
    }
           
@@ -522,11 +522,11 @@ public class ViewJPanel extends javax.swing.JPanel {
                    return false;
                }
             }
- if(txtPhoneNo.getText().isBlank())
+ if(txtPhoneNo.getText().isBlank() && !isNumeric(txtPhoneNo.getText()))
  {
          JOptionPane.showMessageDialog(this," Date cannot be blank, please enter a valid Start Date ");
-         txtStartD.requestFocus();
-         txtStartD.setText("");
+         txtPhoneNo.requestFocus();
+         txtPhoneNo.setText("");
         return false;
  }
         else
@@ -542,8 +542,8 @@ public class ViewJPanel extends javax.swing.JPanel {
  if(txtGender.getText().isBlank())
  {
          JOptionPane.showMessageDialog(this," Gender cannot be blank, please enter employee's gender ");
-         txtStartD.requestFocus();
-         txtStartD.setText("");
+         txtGender.requestFocus();
+         txtGender.setText("");
         return false;
  }
   if(txtLevel.getText().isBlank())
